@@ -29,21 +29,26 @@ function FindPwdPresenter() {
             display: "block",
             marginLeft: "auto",
             marginRight: "auto",
+            width:300
           }}
         >
           <div
             style={{
               width: '100%'
             }}
-          >이름</div>
+          >
+            이름
+          </div>
           <div>
             <input
               type="text"
               style={{
-                width: 300,
+                width: '100%',
                 height: 40,
                 fontsize: 30,
                 borderRadius: 15,
+                border: '1px solid black',
+                boxSizing: 'border-box'
               }}
             />
           </div>
@@ -56,10 +61,12 @@ function FindPwdPresenter() {
             <input
               type="text"
               style={{
-                width: 300,
+                width: '100%',
                 height: 40,
                 fontsize: 30,
                 borderRadius: 15,
+                border: '1px solid black',
+                boxSizing: 'border-box'
               }}
             />
           </div>
@@ -73,10 +80,12 @@ function FindPwdPresenter() {
             <input
               type="text"
               style={{
-                width: 300,
+                width: '100%',
                 height: 40,
                 fontsize: 30,
                 borderRadius: 15,
+                border: '1px solid black',
+                boxSizing: 'border-box'
               }}
             />
           </div>
@@ -85,12 +94,12 @@ function FindPwdPresenter() {
               type="submit"
               value="Login"
               style={{
-                width: 300,
+                width: '100%',
                 height: 37,
                 backgroundColor: "#32404D",
                 color: "white",
-                margin: 10,
-                border: "1px solid black",
+                marginTop: 20,
+                border: "1px solid black"
               }}
             />
           </div>
