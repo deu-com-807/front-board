@@ -1,6 +1,14 @@
+/* eslint-disable no-undef */
 import React from 'react'
 
-function SignUpPresenter() {
+const func = () => {
+  console.log("asdasd");
+}
+function SignUpPresenter({
+  onChangeEmail,
+  onClickSubmit,
+  onChangeId
+}) {
   return (
     <div
       style={{
@@ -16,10 +24,9 @@ function SignUpPresenter() {
         style={{
           marginTop: 100,
           width: 800,
-          height: 500,
+          height: 700,
           backgroundColor: "#A2CEF7",
           borderRadius: 60,
-
           display: "flex",
           flexDirection: "center",
           alignItems: "center",
@@ -31,74 +38,135 @@ function SignUpPresenter() {
             marginLeft: "auto",
             marginRight: "auto",
           }}
-        > 
-        <div>이름</div>
-        <div>
-        
-          <input
-            type="text"
+        >
+          <div
             style={{
-              width: 300,
-              height: 40,
-              fontsize: 30,
-              borderRadius : 15
-            }}
-          />
-        </div>
+              fontWeight: 1000
+            }}>이름</div>
+          <div>
 
-        <div>이메일</div>
-        <div>
-          <input
-            type="text"
+            <input
+              type="text"
+              maxlength={10}
+
+              style={{
+                width: 300,
+                height: 40,
+                fontsize: 30,
+                borderRadius: 15,
+                marginTop: 5,
+                border: 0
+              }}
+            />
+          </div>
+
+          <div
             style={{
-              width: 300,
-              height: 40,
-              fontsize: 30,
-              borderRadius : 15
-            }}
-          />
-        </div>
+              marginTop: 20,
+              fontWeight: 1000
+            }}>이메일</div>
+          <div>
+            <input
+              type="text"
+              maxlength={30}
+              style={{
+                width: 300,
+                height: 40,
+                fontsize: 30,
+                borderRadius: 15,
+                marginTop: 5,
+                border: 0
+              }}
+              onChange={onChangeEmail}
+            />
+          </div>
 
-        <div>아이디</div>
-        <div>
-          <input
-            type="text"
+          <div
             style={{
-              width: 300,
-              height: 40,
-              fontsize: 30,
-              borderRadius : 15
-            }}
-          />
-        </div>
+              marginTop: 20,
+              fontWeight: 1000
+            }}>아이디</div>
+          <div>
+            <input
+              type="text"
+              maxlength={20}
+              style={{
+                width: 300,
+                height: 40,
+                fontsize: 30,
+                borderRadius: 15,
+                marginTop: 5,
+                border: 0
+              }}
+              onChange={onChangeId}
+            />
+          </div>
 
-        <div>패스워드</div>
-        <div>
-          <input
-            type="text"
+          <div
             style={{
-              width: 300,
-              height: 40,
-              fontsize: 30,
-              borderRadius : 15
-            }}
-          />
-        </div>
+              marginTop: 20,
+              fontWeight: 1000
+            }}>패스워드</div>
+          <div>
+            <input
+              type="password"
+              maxlength={10}
+              style={{
+                width: 300,
+                height: 40,
+                fontsize: 30,
+                borderRadius: 15,
+                marginTop: 5,
+                border: 0
+              }}
+            />
+          </div>
 
-        <div>패스워드확인</div>
-        <div>
-          <input
-            type="text"
+          <div
             style={{
-              width: 300,
-              height: 40,
-              fontsize: 30,
-              borderRadius : 15
-            }}
-          />
-        </div>
+              marginTop: 20,
+              fontWeight: 1000
+            }}>패스워드 확인
+          </div>
+          <div>
+            <input
+              type="password"
+              maxlength={10}
+              style={{
+                width: 300,
+                height: 40,
+                fontsize: 30,
+                borderRadius: 15,
+                marginTop: 5,
+                border: 0,
+              }}
+            />
+          </div>
 
+          <div>
+            <button
+              type="button"
+              style={{
+                width: 300,
+                height: 37,
+                left: 570,
+                top: 726,
+                backgroundColor: " #32404D",
+                marginTop: 71,
+                border: 0
+              }}>
+              <label
+                style={{
+                  color: "white",
+                  fontSize: 22
+                }}
+                onClick={onClickSubmit}
+              >
+                회원가입
+              </label>
 
+            </button>
+          </div>
 
 
 
@@ -109,4 +177,4 @@ function SignUpPresenter() {
   )
 }
 
-export default SignUpPresenter
+export default SignUpPresenter;
