@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { LoginBtn } from './Component';
 import LoginPresenter from './LoginPresenter'
@@ -10,8 +10,18 @@ function LoginContainer() {
 
   const handleChangeInputValue = (event) => {
     const result = event.target.value.replace(/[^A-Za-z]/ig, '');
-    setInputValue(result); 
-  } 
+    setInputValue(result);
+  }
+
+  // useEffect(() => {
+
+  //   fetch('http://3.36.87.0:8080/deu/').then(res => {
+  //     return res.json()
+  //   }).then(res => {
+  //     console.log(res);
+  //     debugger
+  //   })
+  // }, [])
 
   const handleKeyUpEnter = (e) => {
     // debugger
@@ -29,14 +39,14 @@ function LoginContainer() {
   }
 
   return (
-    <LoginPresenter 
+    <LoginPresenter
       onChangeInputValue={handleChangeInputValue}
       onKeyUpEnter={handleKeyUpEnter}
       onClickLoginBtn={handleLoginBtn}
       // onChangePwdStyle={handlePwdStyle}
       onClickSignupBtn={handleClickSignupBtn}
     />
-    )
+  )
 }
 
 export default LoginContainer
