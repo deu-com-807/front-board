@@ -1,12 +1,8 @@
 import React from 'react'
 
-function LoginPwd() {
-  
-  const handleKeyUpEnter = (e) => {
-    // e.target.value.addEventListener('keyup', (e) => {
-    //   if(e.keyCode === 13) // login;
-    // });
-  }
+function LoginPwd({
+  onKeyUpEnter
+}) {
   return (
     <div>
       <input
@@ -21,6 +17,7 @@ function LoginPwd() {
           border: "1px solid black",
           borderRadius: 10,
         }}
+        onKeyUp={onKeyUpEnter}
       />
     </div>
     )

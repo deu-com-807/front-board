@@ -42,6 +42,7 @@ function ChangePwdPresenter() {
           <div>
             <input
               type="password"
+              maxLength='20'
               style={{
                 width: "100%",
                 height: 40,
@@ -62,6 +63,7 @@ function ChangePwdPresenter() {
           <div>
             <input
               type="password"
+              maxLength='20'
               style={{
                 width: "100%",
                 height: 40,

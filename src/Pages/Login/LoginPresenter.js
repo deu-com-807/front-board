@@ -43,7 +43,7 @@ function LoginPresenter({
           onChange={onChangeInputValue}
           />
           <LoginPwd
-          onKeyUp={onKeyUpEnter}
+          onKeyUpEnter={onKeyUpEnter}
           onChange={onChangePwdStyle}
           />
           <AutoLogin />
@@ -62,7 +62,10 @@ function LoginPresenter({
             >
               회원가입
             </NavLink>
-            <a href="/">비밀번호 찾기</a>
+            <NavLink
+              to="/findpwd"
+            >비밀번호 찾기
+            </NavLink>
           </div>
           <LoginBtn
           onClickLoginBtn={onClickLoginBtn} 

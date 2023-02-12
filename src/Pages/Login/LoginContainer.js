@@ -13,9 +13,12 @@ function LoginContainer() {
     setInputValue(result); 
   } 
 
-  const handleKeyUpEnter = (e) => [
-    
-  ]
+  const handleKeyUpEnter = (e) => {
+    // debugger
+    // e.target.value.addEventListener('keyup', (e) => {
+    //   if(e.keyCode === 13) 
+    // });
+  }
 
   const handleLoginBtn = (e) => {
     console.log(e);
