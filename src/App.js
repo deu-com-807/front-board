@@ -1,9 +1,9 @@
 import './App.css';
-import Login from './Pages/Login'
+import Router from './Router';
 
 function App() {
   return (
-    <Login />
+    <Router />
   );
 }
 

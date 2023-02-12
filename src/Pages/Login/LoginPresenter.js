@@ -1,85 +1,76 @@
-import React from 'react'
+import React, { useState } from "react";
+import {  NavLink } from "react-router-dom";
+import { AutoLogin, LoginPwd, LoginBtn, LoginId } from "./Component";
 
-function LoginPresenter() {
+function LoginPresenter({
+  onChangeInputValue,
+  onKeyUpEnter,
+  onClickLoginBtn,
+  onChangePwdStyle,
+  onClickSignupBtn
+}) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' }}>
-
-    <div style={{
-      marginTop: 100,
-      width: 800,
-      height: 500,
-      backgroundColor: '#A2CEF7',
-      borderRadius: 60,
-
-      display: 'flex',
-      flexDirection: 'center',
-      alignItems: 'center'
-    }}>
-    <div style={{
-      display: 'block',
-      marginLeft: 'auto',
-      marginRight: 'auto'
-    }}>
-      <div><input type='text' maxlength='20' placeholder='아이디 입력'
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      <div
         style={{
-          width: 300,
-          height: 40.35,
-          margin: 10,
-          background: '#FFFFFF',
-          border: '1px solid black',
-          borderRadius: 10
+          marginTop: 100,
+          width: 800,
+          height: 500,
+          backgroundColor: "#A2CEF7",
+          borderRadius: 60,
+
+          display: "flex",
+          flexDirection: "center",
+          alignItems: "center",
         }}
-      /></div>
-      <div><input type='passward' maxlength='20' placeholder='패스워드 입력'
-        style={{
-          width: 300,
-          height: 40.35,
-          background: '#FFFFFF',
-          margin: 10,
-          border: '1px solid black',
-          borderRadius: 10,
-        }}
-      /></div>
-      <div>
-        <div style={{
-          display:'inline',
-          float: 'left',
-          margin: 10,
-        }}>
-          <label
+      >
+        <div
+          style={{
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          <LoginId
+          onChange={onChangeInputValue}
+          />
+          <LoginPwd
+          onKeyUp={onKeyUpEnter}
+          onChange={onChangePwdStyle}
+          />
+          <AutoLogin />
+          <div
             style={{
-              width: 100
+              display: "inline",
+              float: "right",
+              margin: 10,
             }}
-          ><input type='checkbox'/>자동 로그인
-          </label></div>
-        <div style={{
-          display:'inline',
-          float: 'right',
-          margin: 10,
-        }}>
-          <a href='/'
-            style={{
-              marginRight: 10
-            }}
-          >회원가입</a>
-          <a href='/'>비밀번호 찾기</a>
+          >
+            <NavLink
+              to="/signup"
+              style={{
+                marginRight: 10,
+              }}
+            >
+              회원가입
+            </NavLink>
+            <a href="/">비밀번호 찾기</a>
+          </div>
+          <LoginBtn
+          onClickLoginBtn={onClickLoginBtn} 
+          />
         </div>
       </div>
-      <div><input type='submit' value='Login'
-        style={{
-          width: 300,
-          height: 37,
-          backgroundColor: '#32404D',
-          color: 'white',
-          margin: 10,
-          border: '1px solid black'
-        }}
-      /></div>
     </div>
-    </div>
-
-    </div>
-    )
+  );
 }
 
-export default LoginPresenter
+export default LoginPresenter;
