@@ -1,8 +1,6 @@
 import React from "react";
-function FindPwdPresenter({
-  onChangeEmail,
-  onClickSubmit,
-}) {
+
+function ChangePwdPresenter() {
   return (
     <div
       style={{
@@ -31,83 +29,61 @@ function FindPwdPresenter({
             display: "block",
             marginLeft: "auto",
             marginRight: "auto",
-            width:300
+            width: 300,
           }}
         >
           <div
             style={{
-              width: '100%'
+              width: "100%",
             }}
           >
-            이름
+            변경할 패스워드
           </div>
           <div>
             <input
-              type="text"
-              maxLength= '10'
+              type="password"
               style={{
-                width: '100%',
+                width: "100%",
                 height: 40,
                 fontsize: 30,
                 borderRadius: 15,
-                border: '1px solid black',
-                boxSizing: 'border-box'
+                border: "1px solid black",
+                boxSizing: "border-box",
               }}
             />
           </div>
           <div
             style={{
-              width: '100%'
+              width: "100%",
             }}
-          >이메일</div>
-          <div>
-            <input
-              type="text"
-              maxLength='30'
-              style={{
-                width: '100%',
-                height: 40,
-                fontsize: 30,
-                borderRadius: 15,
-                border: '1px solid black',
-                boxSizing: 'border-box'
-              }}
-              onChange={onChangeEmail}
-            />
+          >
+            패스워드 확인
           </div>
-
-          <div
-            style={{
-              width: '100%'
-            }}
-          >아이디</div>
           <div>
             <input
-              type="text"
-              maxLength='20'
+              type="password"
               style={{
-                width: '100%',
+                width: "100%",
                 height: 40,
                 fontsize: 30,
                 borderRadius: 15,
-                border: '1px solid black',
-                boxSizing: 'border-box'
+                border: "1px solid black",
+                boxSizing: "border-box",
               }}
             />
           </div>
           <div>
             <input
               type="submit"
-              value="Find"
+              value="변경"
               style={{
-                width: '100%',
+                width: "100%",
                 height: 37,
                 backgroundColor: "#32404D",
                 color: "white",
                 marginTop: 20,
-                border: "1px solid black"
+                border: "1px solid black",
               }}
-              onClick={onClickSubmit}
             />
           </div>
         </div>
@@ -116,4 +92,4 @@ function FindPwdPresenter({
   );
 }
 
-export default FindPwdPresenter;
+export default ChangePwdPresenter;

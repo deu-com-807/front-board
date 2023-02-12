@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom';
+import ChangePwd from '../Pages/ChangePwd';
 import FindPwd from '../Pages/FindPwd';
 import Login from '../Pages/Login';
 import SignUp from '../Pages/SignUp';
@@ -17,7 +18,7 @@ function Router() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<SignUp/>}/>
       <Route path='/findpwd' element={<FindPwd/>}/>
-      <Route path='/changepwd' element={<Login/>}/>
+      <Route path='/changepwd' element={<ChangePwd/>}/>
 
     </Routes>
 
