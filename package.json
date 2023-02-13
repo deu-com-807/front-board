@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server-copy" : "cp -r ./build/* /var/www/html/"
+    "server-copy": "cp -r ./build/* /var/www/html/"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +36,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://3.36.49.202:8080/board/"
 }
