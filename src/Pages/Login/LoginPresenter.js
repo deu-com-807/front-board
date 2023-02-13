@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { AutoLogin, LoginPwd, LoginBtn, LoginId } from "./Component";
 import Dialog from "../../Component/Dialog";
+import { BsFillPersonFill, AiFillLock } from 'react-icons/ai';
 
 function LoginPresenter({
   onChangeInputValue,
@@ -42,14 +43,21 @@ function LoginPresenter({
             marginRight: "auto",
           }}
         >
-          <LoginId
-            onChangeInputValue={onChangeInputValue}
-          />
-          <LoginPwd
-            onKeyUpEnter={onKeyUpEnter}
-            onChange={onChangePwdStyle}
-          />
+          <div>
+            <LoginId
+              onChangeInputValue={onChangeInputValue}
+            />
+          </div>
+
+          <div>
+            <LoginPwd
+              onKeyUpEnter={onKeyUpEnter}
+              onChange={onChangePwdStyle}
+            />
+          </div>
+
           <AutoLogin />
+
           <div
             style={{
               display: "inline",

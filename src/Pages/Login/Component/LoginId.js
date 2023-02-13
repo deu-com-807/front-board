@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsFillPersonFill } from 'react-icons/bs';
 
 function LoginId({
   onChangeInputValue
@@ -6,12 +7,13 @@ function LoginId({
 
   return (
     <div>
+      <BsFillPersonFill size={35} />
       <input
         type="text"
         maxLength="20"
         placeholder="아이디 입력"
         style={{
-          width: 300,
+          width: 260,
           height: 40.35,
           margin: 10,
           background: "#FFFFFF",
@@ -21,6 +23,7 @@ function LoginId({
         }}
         onChange={onChangeInputValue}
       />
+
     </div>
   )
 }
