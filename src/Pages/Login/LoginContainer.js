@@ -10,16 +10,16 @@ function LoginContainer({ setDialogProps }) {
 
   // input 안의 value가 값이 ''일 때 setAlert
 
-  useEffect(() => {
-    fetch('login/allUsers')
-      .then(res => {
-        console.log(res);
-        return res.json()
-      })
-      .then(res => {
-        debugger
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch('login/allUsers')
+  //     .then(res => {
+  //       console.log(res);
+  //       return res.json()
+  //     })
+  //     .then(res => {
+  //       debugger
+  //     })
+  // }, [])
 
 
   const handleChangeInputValue = (e) => {

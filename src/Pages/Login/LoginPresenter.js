@@ -1,15 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { AutoLogin, LoginPwd, LoginBtn, LoginId } from "./Component";
-import Dialog from "../../Component/Dialog";
 
 function LoginPresenter({
   onChangeInputValue,
   onKeyUpEnter,
   onClickLoginBtn,
   onChangePwdStyle,
-  onClickSignupBtn,
-  onChangeAlertMessage
 }) {
   return (
     <div
@@ -42,13 +39,16 @@ function LoginPresenter({
             marginRight: "auto",
           }}
         >
-          <LoginId
-            onChangeInputValue={onChangeInputValue}
-          />
-          <LoginPwd
-            onKeyUpEnter={onKeyUpEnter}
-            onChange={onChangePwdStyle}
-          />
+          <div>
+            <LoginId onChangeInputValue={onChangeInputValue} />
+          </div>
+          <div 
+            style={{
+              marginTop: 20
+            }}
+          >
+            <LoginPwd onKeyUpEnter={onKeyUpEnter} onChange={onChangePwdStyle} />
+          </div>
           <AutoLogin />
           <div
             style={{
@@ -65,14 +65,9 @@ function LoginPresenter({
             >
               회원가입
             </NavLink>
-            <NavLink
-              to="/findpwd"
-            >비밀번호 찾기
-            </NavLink>
+            <NavLink to="/findpwd">비밀번호 찾기</NavLink>
           </div>
-          <LoginBtn
-            onClickLoginBtn={onClickLoginBtn}
-          />
+          <LoginBtn onClickLoginBtn={onClickLoginBtn} />
         </div>
       </div>
     </div>
