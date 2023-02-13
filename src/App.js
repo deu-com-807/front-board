@@ -4,11 +4,15 @@ import Dialog from './Component/Dialog';
 import Router from './Router';
 
 function App() {
-  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const [dialogProps, setDialogProps] = useState({
+    isOpen: false,
+    msg: ""
+  });
+
   return (
     <div>
-      <Router />
-      {isDialogOpen && <Dialog />}
+      <Router setDialogProps={setDialogProps} />
+      {dialogProps.isOpen && <Dialog msg={dialogProps.msg} setDialogProps={setDialogProps} />}
     </div>
   );
 }

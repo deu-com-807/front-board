@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import LoginPresenter from './LoginPresenter'
 
-function LoginContainer() {
+function LoginContainer({ setDialogProps }) {
   const navigate = useNavigate()
 
   const [inputValue, setInputValue] = useState('')
@@ -10,16 +10,16 @@ function LoginContainer() {
 
   // input 안의 value가 값이 ''일 때 setAlert
 
-  useEffect(() => {
-    fetch('http://3.36.49.202:8080/board/login/allUsers')
-      .then(res => {
-        console.log(res);
-        return res.json
-      })
-      .then(res => {
-        debugger
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch('http://3.36.49.202:8080/board/login/allUsers')
+  //     .then(res => {
+  //       console.log(res);
+  //       return res.json
+  //     })
+  //     .then(res => {
+  //       debugger
+  //     })
+  // }, [])
 
 
   const handleChangeInputValue = (e) => {
@@ -50,7 +50,10 @@ function LoginContainer() {
   }
 
   const handleLoginBtn = (e) => {
-    console.log(e);
+    setDialogProps({
+      isOpen: true,
+      msg: "로그인 버튼을 눌렀습니다"
+    })
   }
 
   const handleClickSignupBtn = () => {

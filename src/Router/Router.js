@@ -6,19 +6,19 @@ import Login from '../Pages/Login';
 import SignUp from '../Pages/SignUp';
 // import Login from '../Login'
 
-function Router() {
+function Router({ setDialogProps }) {
   const navigate = useNavigate()
-  
+
   useEffect(() => {
-    if(window.location.pathname === '/') navigate('/login');
+    if (window.location.pathname === '/') navigate('/login');
   }, []);
-  
-  return(
+
+  return (
     <Routes>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/signup' element={<SignUp/>}/>
-      <Route path='/findpwd' element={<FindPwd/>}/>
-      <Route path='/changepwd' element={<ChangePwd/>}/>
+      <Route path='/login' element={<Login setDialogProps={setDialogProps} />} />
+      <Route path='/signup' element={<SignUp setDialogProps={setDialogProps} />} />
+      <Route path='/findpwd' element={<FindPwd setDialogProps={setDialogProps} />} />
+      <Route path='/changepwd' element={<ChangePwd setDialogProps={setDialogProps} />} />
 
     </Routes>
 

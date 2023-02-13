@@ -21,13 +21,11 @@ function LoginPresenter({
         height: "100%",
       }}
     >
-      <Dialog
-        onChangeAlertMessage={onChangeAlertMessage}
-      />
       <div
         style={{
           marginTop: 100,
           width: 800,
+          minWidth: 800,
           height: 500,
           backgroundColor: "#A2CEF7",
           borderRadius: 60,
