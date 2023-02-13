@@ -1,25 +1,39 @@
 import React from 'react'
-import { BsFillPersonFill } from 'react-icons/bs';
+import { BsFillPersonFill } from "react-icons/bs";
+
 
 function LoginId({
   onChangeInputValue
 }) {
 
   return (
-    <div>
-      <BsFillPersonFill size={35} />
+    <div
+      style={{
+        display: "flex",
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        border: '1px #000 solid',
+        padding: 5
+      }}
+    >
+      <BsFillPersonFill size={30} style={{
+        marginRight: 10
+      }} />
       <input
         type="text"
         maxLength="20"
         placeholder="아이디 입력"
         style={{
-          width: 260,
+          flex: 1,
           height: 40.35,
-          margin: 10,
           background: "#FFFFFF",
-          border: "1px solid black",
+          border: "none",
           borderRadius: 10,
-          imeMode: 'disabled'
+          imeMode: 'disabled',
+          display: 'inline',
+          boxShadow: 'none',
         }}
         onChange={onChangeInputValue}
       />

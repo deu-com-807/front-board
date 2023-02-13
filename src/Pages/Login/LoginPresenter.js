@@ -1,16 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { AutoLogin, LoginPwd, LoginBtn, LoginId } from "./Component";
+<<<<<<< HEAD
 import Dialog from "../../Component/Dialog";
 import { BsFillPersonFill, AiFillLock } from 'react-icons/ai';
+=======
+>>>>>>> 5b72130f3bcdd3b9c15e71d8ebc724e0a5b351f4
 
 function LoginPresenter({
   onChangeInputValue,
   onKeyUpEnter,
   onClickLoginBtn,
   onChangePwdStyle,
-  onClickSignupBtn,
-  onChangeAlertMessage
 }) {
   return (
     <div
@@ -44,6 +45,7 @@ function LoginPresenter({
           }}
         >
           <div>
+<<<<<<< HEAD
             <LoginId
               onChangeInputValue={onChangeInputValue}
             />
@@ -56,6 +58,17 @@ function LoginPresenter({
             />
           </div>
 
+=======
+            <LoginId onChangeInputValue={onChangeInputValue} />
+          </div>
+          <div 
+            style={{
+              marginTop: 20
+            }}
+          >
+            <LoginPwd onKeyUpEnter={onKeyUpEnter} onChange={onChangePwdStyle} />
+          </div>
+>>>>>>> 5b72130f3bcdd3b9c15e71d8ebc724e0a5b351f4
           <AutoLogin />
 
           <div
@@ -73,14 +86,9 @@ function LoginPresenter({
             >
               회원가입
             </NavLink>
-            <NavLink
-              to="/findpwd"
-            >비밀번호 찾기
-            </NavLink>
+            <NavLink to="/findpwd">비밀번호 찾기</NavLink>
           </div>
-          <LoginBtn
-            onClickLoginBtn={onClickLoginBtn}
-          />
+          <LoginBtn onClickLoginBtn={onClickLoginBtn} />
         </div>
       </div>
     </div>
