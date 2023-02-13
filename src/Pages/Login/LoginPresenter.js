@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import {  NavLink } from "react-router-dom";
 import { AutoLogin, LoginPwd, LoginBtn, LoginId } from "./Component";
+import Dialog from "../../Component/Dialog";
 
 function LoginPresenter({
   onChangeInputValue,
@@ -19,6 +20,7 @@ function LoginPresenter({
         height: "100%",
       }}
     >
+      <Dialog />
       <div
         style={{
           marginTop: 100,

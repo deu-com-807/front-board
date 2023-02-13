@@ -1,10 +1,6 @@
 import React from 'react'
 
 function LoginId() {
-  function handleOnInput(e)  {
-    e.value = e.value.replace(/[^A-Za-z]/ig, '')
-  }
-
   return (
     <div>
       <input
@@ -19,10 +15,6 @@ function LoginId() {
           border: "1px solid black",
           borderRadius: 10,
           imeMode:'disabled'
-        }}
-        onChange={(e)=>{
-          let value = e.target.value;
-          
         }}
       />
     </div>

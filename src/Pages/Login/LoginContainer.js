@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
-import { LoginBtn } from './Component';
 import LoginPresenter from './LoginPresenter'
 
 function LoginContainer() {
