@@ -1,5 +1,5 @@
 import React from "react";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AutoLogin, LoginPwd, LoginBtn, LoginId } from "./Component";
 import Dialog from "../../Component/Dialog";
 
@@ -8,7 +8,8 @@ function LoginPresenter({
   onKeyUpEnter,
   onClickLoginBtn,
   onChangePwdStyle,
-  onClickSignupBtn
+  onClickSignupBtn,
+  onChangeAlertMessage
 }) {
   return (
     <div
@@ -20,7 +21,9 @@ function LoginPresenter({
         height: "100%",
       }}
     >
-      <Dialog />
+      <Dialog
+        onChangeAlertMessage={onChangeAlertMessage}
+      />
       <div
         style={{
           marginTop: 100,
@@ -42,11 +45,11 @@ function LoginPresenter({
           }}
         >
           <LoginId
-          onChange={onChangeInputValue}
+            onChangeInputValue={onChangeInputValue}
           />
           <LoginPwd
-          onKeyUpEnter={onKeyUpEnter}
-          onChange={onChangePwdStyle}
+            onKeyUpEnter={onKeyUpEnter}
+            onChange={onChangePwdStyle}
           />
           <AutoLogin />
           <div
@@ -70,7 +73,7 @@ function LoginPresenter({
             </NavLink>
           </div>
           <LoginBtn
-          onClickLoginBtn={onClickLoginBtn} 
+            onClickLoginBtn={onClickLoginBtn}
           />
         </div>
       </div>

@@ -6,10 +6,30 @@ function LoginContainer() {
   const navigate = useNavigate()
 
   const [inputValue, setInputValue] = useState('')
+  const [alert, setAlert] = useState('');
 
-  const handleChangeInputValue = (event) => {
-    const result = event.target.value.replace(/[^A-Za-z]/ig, '');
-    setInputValue(result);
+  // input 안의 value가 값이 ''일 때 setAlert
+
+  useEffect(() => {
+    fetch('http://3.36.49.202:8080/board/login/allUsers')
+      .then(res => {
+        console.log(res);
+        return res.json
+      })
+      .then(res => {
+        debugger
+      })
+  }, [])
+
+
+  const handleChangeInputValue = (e) => {
+    debugger
+    // setInputValue()
+  }
+
+  const handleAlertMessage = () => {
+    // if ()
+    //   setAlert('');
   }
 
   // useEffect(() => {
@@ -44,6 +64,7 @@ function LoginContainer() {
       onClickLoginBtn={handleLoginBtn}
       // onChangePwdStyle={handlePwdStyle}
       onClickSignupBtn={handleClickSignupBtn}
+      onChangeAlertMessage={handleAlertMessage}
     />
   )
 }
