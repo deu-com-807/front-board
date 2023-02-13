@@ -1,9 +1,9 @@
 import React from "react";
 
-function LoginBtn({onClickLoginBtn}) {
+function LoginBtn({ onClickLoginBtn }) {
   const handleLoginBtn = (e) => {
-    const inputValue = 
-    e.target.value = '';
+    const inputValue =
+      e.target.value = '';
   }
 
   return (
